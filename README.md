@@ -1,3 +1,3 @@
 # ReduxSimpleExample
 
-> Simple exercise to learn redux.
+> Simple exercise for learning redux.
