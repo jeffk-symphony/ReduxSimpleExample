@@ -12,15 +12,15 @@
     </div>
     <script>
 
-      // Exercise
-        // 1. Add an action creator for decrement
-        // 2. Add a reducer for decrement
-        // 3. Add event listener for decrement
-
       // Action ---------------------------------------
       const INCREMENT = 'INCREMENT';
       function increment() {
         return { type: INCREMENT };
+      }
+
+      const DECREMENT = 'DECREMENT';
+      function decrement() {
+        return { type: DECREMENT };
       }
 
       // Reducer --------------------------------------
@@ -29,6 +29,8 @@
         switch (action.type) {
           case 'INCREMENT':
             return state + 1;
+          case 'DECREMENT':
+            return state - 1;
           default:
             return state;
         }
@@ -49,6 +51,11 @@
       document.getElementById('increment')
         .addEventListener('click', function () {
           store.dispatch(increment());
+        });
+
+      document.getElementById('decrement')
+        .addEventListener('click', function () {
+          store.dispatch(decrement());
         });
 
     </script>
